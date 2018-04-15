@@ -182,7 +182,8 @@ if( isset( $status["state"] ))
 {
 	$repeat = $status["repeat"];
 	$random = $status["random"];
-	$xfade = $status["xfade"];
+	if (isset($status["xfade"])) $xfade = $status["xfade"];
+	else $xfade = "0";
 
 	// STATUSBAR Begin: Top playlist_body
 	echo "<!-- Begin the Top of the first table, Should only display the status and refresh -->";
@@ -528,15 +529,25 @@ if( $status["volume"] >= "0" && $config["display_volume"] === true )
 	/* Begin Volume Bar */
 	$vol_div = "1";
 	echo "<td valign=\"middle\" align=\"center\">";
+
+	if ($config["volume_mode"] == "exp") {
+		$topvol = max(round($status["volume"] * $config["volume_factor"]), $status["volume"] + 1);
+		$bottomvol = min(round($status["volume"] / $config["volume_factor"]), $status["volume"] - 1);
+	} else {
+		$topvol = $status["volume"] + $config["volume_incr"];
+		$bottomvol = $status["volume"] - $config["volume_incr"];
+	}
+	if($topvol > 100) { $topvol = "100"; }
+	if($bottomvol < 0) { $bottomvol = "0"; }
+
 	if( $status["volume"] == "0" )
 	{
 		echo "<";
 	}
 	else if ( $commands["setvol"] === true)
 	{
-		echo "<a title=\"Decrease Volume by {$config["volume_incr"]}%\" ";
-		echo "href=\"index.php?body=playlist&amp;server=$server&amp;hide=$hide&amp;show_options=$show_options&amp;command=setvol&amp;arg=";
-		echo ($status["volume"] - $config["volume_incr"]) . "\"><</a>";
+		echo "<a title=\"Decrease Volume to {$bottomvol}%\" ";
+		echo "href=\"index.php?body=playlist&amp;server=$server&amp;hide=$hide&amp;show_options=$show_options&amp;command=setvol&amp;arg=$bottomvol\"><</a>";
 	}
 	echo "</td>";
 	echo "<td valign=\"middle\" align=\"center\">";
@@ -556,12 +567,6 @@ if( $status["volume"] >= "0" && $config["display_volume"] === true )
 	echo "<!-- End Seek Bar -->";
 	echo "</table></td>";
 	echo "<td valign=\"middle\" align=\"center\">";
-
-	$topvol = $status["volume"] + $config["volume_incr"];
-	if($topvol > 100)
-	{
-		$topvol = "100";
-	}
 
 	if( $status["volume"] != 100 && $commands["setvol"] === true )
 	{

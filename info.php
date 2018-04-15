@@ -429,13 +429,12 @@ function getLsInfo( $conn, $command, $display_fields )
 				// add additional information depending on last item type
 				switch ($type){
 					case "directory":
-							$dir[$dcount]["$el"] = str_replace( "$el: ", "", $got);
+							//$dir[$dcount]["$el"] = str_replace( "$el: ", "", $got);
 							break;
 					case "playlist":
 							//$playlist[$pcount]["$el"] = str_replace( "$el: ", "", $got);
 							break;
 					case "file":
-					        //
 							$music[$mcount]["$el"] = str_replace( "$el: ", "", $got);
 							break;
 									 

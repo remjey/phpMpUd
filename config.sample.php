@@ -226,6 +226,12 @@ $config = array(
 		"display_volume" => true,
 		"volume_incr"    => "10",
 
+    /* Sometimes it is better to use exponential volume buttons. When this option is set,
+     * the volume up and volume down buttons will respectively multiply and divide the volume
+     * by the value of volume_factor. */
+    // "volume_mode"    => "exp",
+    // "volume_factor"  => "1.2"
+
 		"filetypes" => array('.flac$', '.mp3', '.aac', '.mod', '.ogg'),
 
 		/**************************

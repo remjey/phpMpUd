@@ -296,7 +296,7 @@ function displayDirectory( $dir, $dir_url, $sort, $title, $mfcount, $mtcount, $p
 	{
 		$dirs[$i] = stripslashes( $dirs[$i] );
 		$build_dir = rawurlencode( $build_dir );
-		echo "&nbsp;&nbsp;<small>(<a href=\"index.php?body=main&amp;feature=$feature&amp;server=$server&amp;dir=$build_dir&amp;sort=$sort&amp;ordered=$ordered&amp;command=update&amp;arg=$build_dir/\"";
+		echo "&nbsp;&nbsp;<small>(<a href=\"index.php?body=main&amp;feature=$feature&amp;server=$server&amp;dir=$build_dir&amp;sort=$sort&amp;ordered=$ordered&amp;command=update&amp;arg=$build_dir\"";
 		echo "target=\"main\" title=\"Update the Current Directory\">db update</a>)</small>";
 	}
 	if( $search_bar === true && empty($feature)) {
