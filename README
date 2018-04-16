@@ -1,10 +1,18 @@
 
-                                    phpMp
-                        http://www.musicpd.org
+                                    phpMpUd
+                       https://github.com/remjey/phpMpUd
 
-phpMp is a web interface (written in PHP) for the Music Player Daemon (MPD).
+phpMpUd is a web interface (written in PHP) for the Music Player Daemon (MPD).
+It is based on the unmaintained phpMp v0.12.0. It has not much code changed but
+it works with the PHP interpreter and MPD server available in Debian Stable.
 
-To install phpMp, see INSTALL.
+I want to keep it alive because I use it on my Raspberry Pi because it’s very
+light and simple.
+
+To install phpMpUd, see INSTALL.
+
+
+Below is the original content of the phpMp README.
 
 
 inline=

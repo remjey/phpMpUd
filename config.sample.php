@@ -1,8 +1,8 @@
 <?php
 
 /*
-	Be careful changing this configuration file, phpMp doesn't check this 
-	file for errors, and will certainly mess phpMp up if not correct.
+	Be careful changing this configuration file, phpMpUd doesn't check this 
+	file for errors, and will certainly mess phpMpUd up if not correct.
 
 	If you edit this file, you must refresh the page for it to take effect
 */
@@ -56,7 +56,7 @@ $config = array(
 		"frame_border_size" => "0",
 
 		/*************************************************************
-		/ Change phpMp behaviour to where a button changes from play /
+		/ Change phpMpUd behaviour to where a button changes from play /
 		/ to pause and visa-versa, instead of showing all buttons    /
 		/************************************************************/
 		"play_pause" => true,
@@ -170,7 +170,7 @@ $config = array(
 		/ Add any fields you would like that you have added to the metadata_to_use option in your mpd.conf	/
 		/ This field is extremely important to be setup correctly, type the field exactly as you did in mpd.conf/
 		/ capitolize the first letter.										/
-		/ Title is absolutely required for this phpMp to function, else filename will show			/
+		/ Title is absolutely required for this phpMpUd to function, else filename will show			/
 		/*******************************************************************************************************/
 		"display_fields" => array('Artist', 'Composer', 'Performer', 'Title', 'Album', 'Track', 'Genre', 'Date', 'Time'),
 
@@ -237,7 +237,7 @@ $config = array(
 		/**************************
 		/ No need to change these /
 		/*************************/
-		"title" => "phpMp",
+		"title" => "phpMpUd",
 		"unknown_string" => "",
 		"song_separator" => "rqqqrqqqr"
 );

@@ -206,7 +206,7 @@ if( $commands["listall"] === false || $commands["lsinfo"] === false || $commands
 	setcookie( "phpMp_password[$hostport]", "" );
 	unset( $has_password );
 
-	echo "<b>Error:</b> Can't load phpMp due to not having permission to the following commands: ";
+	echo "<b>Error:</b> Can't load phpMpUd due to not having permission to the following commands: ";
 	if( $commands["listall"] === false )
 	{
 		echo "listall ";

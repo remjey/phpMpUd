@@ -1,4 +1,4 @@
-                                phpMp - INSTALL
+                                phpMpUd - INSTALL
 
 Requirements
 ------------
@@ -15,25 +15,25 @@ Options
 Download
 --------
 
-Get the latest release of phpMp from http://www.musicpd.org
+Get the latest release of phpMpUd from https://github.com/remjey/phpMpUd
 
 Install
 -------
 
-1) move phpMp archive to a directory accessible by the web server
+1) move phpMpUd archive to a directory accessible by the web server
 
-$ cp phpMp-x.x.x.tar.gz public_html/
+$ cp phpMpUd-x.x.x.tar.gz public_html/
 
-2) cd to where you copied the phpMp archive
+2) cd to where you copied the phpMpUd archive
 
 $ cd public_html
 
 3) untar and unzip archive
 
-$ tar zxvf phpMp-x.x.x.tar.gz
+$ tar zxvf phpMpUd-x.x.x.tar.gz
 
 4) configure options (such as port MPD listens to and host MPD is running on)
-using your favorite text editor, edit config.php
+using your favorite text editor, copy config.sample.php to config.php and edit it.
 
 5) it maybe required that you change permissions of the directory and the files,
 if using apache use something like: chown apache:apache; chmod 550
@@ -41,12 +41,14 @@ if using apache use something like: chown apache:apache; chmod 550
 6) It is optional but *highly recommended* to make sure allow_url_fopen = On; in your php.ini
 
 example:
-$ vi phpMp-x.x.x/config.php
+$ cd phpMpUd-x.x.x
+$ cp config.sample.php config.php
+$ vi config.php
 
-Using phpMp
+Using phpMpUd
 ---------
 
-Point your favorite web browser at the location of phpMp on your web server
+Point your favorite web browser at the location of phpMpUd on your web server
 
 example:
-http://my.webserver.com/~myusername/phpMp-x.x.x
+http://my.webserver.com/~myusername/phpMpUd-x.x.x

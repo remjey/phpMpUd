@@ -140,7 +140,7 @@ function stats( $fp, $color, $MPDversion, $phpMpVersion, $host, $port )
 			"Uptime" => secondsToDHMS( $stats["uptime"] ),
 			"Play Time" => secondsToDHMS( $stats["playtime"] ),
 			"MPD Version" => $MPDversion,
-			"phpMp Version" => $phpMpVersion,
+			"phpMpUd Version" => $phpMpVersion,
 			"Database Updated" => date( "F j, Y, g:i a", (int) $stats["db_update"] ),
 			"Total Database Play Time" => secondsToDHMS( $stats["db_playtime"] )
 		); 

@@ -1,6 +1,6 @@
 <?php
 include "theme.php";
-$phpMpVersion="0.12.1";
+$phpMpVersion="0.12.2";
 
 function cleanSort( $sort_array, $display_fields )
 {
@@ -215,7 +215,7 @@ function displayDirectory( $dir, $dir_url, $sort, $title, $mfcount, $mtcount, $p
 		{
 			$feature_bar .= "&nbsp;|&nbsp;";
 		}
-		$feature_bar .= "<a title=\"View MPD/phpMp Statistics\" target=main href=\"index.php?body=main&amp;server=$server&amp;dir=$dir_url&amp;sort=$sort&amp;feature=stats\">Stats</a>";
+		$feature_bar .= "<a title=\"View MPD/phpMpUd Statistics\" target=main href=\"index.php?body=main&amp;server=$server&amp;dir=$dir_url&amp;sort=$sort&amp;feature=stats\">Stats</a>";
 	}
 
 	if( $commands["load"] === true )
@@ -344,7 +344,7 @@ function mbFirstChar( $str )
 function readFileOverHTTP( $fp, $stream )
 {
 	$stream = rawurldecode( $stream );
-	$pointer = fopen( $stream, "r" ) or die ( "<H3><b>If you want phpMp to download your stream, you have to change 'allow_url_open' to On in your php.ini</b></H3>");
+	$pointer = fopen( $stream, "r" ) or die ( "<H3><b>If you want phpMpUd to download your stream, you have to change 'allow_url_open' to On in your php.ini</b></H3>");
 	$contents = fread( $pointer, "1024" );
 	if( preg_match( "/.pls$/", $stream ))
 	{
